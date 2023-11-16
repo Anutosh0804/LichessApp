@@ -26,6 +26,9 @@ class Handler:
         
         except Exception as err:
             raise HTTPException(status_code=500, detail=str(err)) from err
+        
+        finally:
+            self.db.close_db()
 
     def get_player_rating_history(self, username):
         response = list()
@@ -48,6 +51,9 @@ class Handler:
         
         except Exception as err:
             raise HTTPException(status_code=500, detail=str(err)) from err
+
+        finally:
+            self.db.close_db()
     
     def get_rating_history_csv(self):
         response = list()
@@ -66,3 +72,6 @@ class Handler:
         
         except Exception as err:
             raise HTTPException(status_code=500, detail=str(err)) from err
+
+        finally:
+            self.db.close_db()

@@ -8,6 +8,7 @@ from handler import Handler
 
 router = APIRouter()
 
+
 @router.get("/top-players")
 def get_top_player(request: Request):
     try:
@@ -15,6 +16,7 @@ def get_top_player(request: Request):
         return JSONResponse(status_code=200, content=jsonable_encoder(response))
     except HTTPException as err:
         return err
+
 
 @router.get("/player/{username}/rating-history")
 def get_player_rating_history(request: Request, username):

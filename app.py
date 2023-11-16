@@ -24,7 +24,11 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return "Welcome to Lichess App"
+
+@app.get("/health")
+def get_health():
+    return {"message": "OK"}
 
 @app.middleware("http")
 async def authorization(request: Request, call_next):
