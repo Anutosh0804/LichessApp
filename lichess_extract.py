@@ -4,7 +4,9 @@ from datetime import datetime, date as today_date
 import psycopg2
 import json
 
-API_TOKEN = "lip_9OlTGSB82eqAHUzGEOO3"
+
+# Put your api token here
+API_TOKEN = ""
 
 create_table_query = """
 CREATE TABLE IF NOT EXISTS user_details (
