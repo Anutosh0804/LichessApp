@@ -1,0 +1,21 @@
+GET_TOP_PLAYERS = """
+SELECT 
+    username as username, 
+    current_rating as current_rating, 
+    oldest_rating as oldest_rating, 
+    rating_history as rating_history
+FROM 
+    public.user_details;
+"""
+
+GET_PLAYER_HISTORY = """
+SELECT 
+    username as username, 
+    current_rating as current_rating, 
+    oldest_rating as oldest_rating, 
+    rating_history as rating_history
+FROM 
+    public.user_details
+WHERE
+    username = '%s';
+"""
