@@ -7,5 +7,3 @@
 2. Fetch data from Lichess.org and store the data in postgresql db (create a query file for that) on port 5433
 
 3. Authentication
-
-lip_9OlTGSB82eqAHUzGEOO3
