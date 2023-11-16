@@ -4,6 +4,11 @@ from datetime import datetime, date as today_date
 import psycopg2
 import json
 
+<<<<<<< HEAD
+=======
+
+# Put your api token here
+>>>>>>> 1629d12fc6295cc573f34ff1d83a3c0ddd6ecc68
 API_TOKEN = ""
 
 create_table_query = """
