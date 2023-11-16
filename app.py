@@ -23,7 +23,12 @@ from deps import get_current_user
 
 app = FastAPI()
 
+# for prod
 api_dependencies = [Depends(get_current_user)]
+
+# for dev
+# api_dependencies = []
+
 app.include_router(services.router, dependencies=api_dependencies)
 
 origins = ["*"]
