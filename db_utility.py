@@ -12,7 +12,6 @@ class DBUtility:
                             user="postgres",
                             password="admin",
                             port="5433")
-        print("Connection Established Successfully")
         self.db_init_flag = 1
         return db_connection
     
@@ -31,3 +30,12 @@ class DBUtility:
         self.db.commit()
         result = cursor.fetchall()
         return result
+    
+    def execute_insert(self, query):
+        if self.db_init_flag == 0:
+            self.init_db()
+        cursor = self.db.cursor()
+
+        cursor.execute(query)
+        self.db.commit()
+        return True
